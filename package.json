@@ -1,8 +1,7 @@
 {
-  "name": "vue2-starter",
-  "version": "1.0.0",
-  "description": "Simple Vue 2 Starter for single page application with Vuex and Vue Router",
-  "main": "./src/js/components/vue-starter.vue",
+  "name": "vue-boilerplate",
+  "version": "0.0.1",
+  "description": "Advance Vue Boilerplate For Best Practice",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --inline --hot",
     "prod": "cross-env NODE_ENV=production webpack --config ./webpack/webpack-prod.config.js -p --color --progress",
@@ -13,22 +12,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BosNaufal/vue2-starter.git"
+    "url": "git+https://github.com/BosNaufal/vue-boilerplate.git"
   },
   "keywords": [
     "vue",
     "component",
     "vue-js",
-    "vue-starter",
+    "vue-boilerplate",
     "vue-boilerplate",
     "boilerplate"
   ],
   "author": "Naufal Rabbani <bosnaufalemail@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BosNaufal/vue-starter/issues"
+    "url": "https://github.com/BosNaufal/vue-boilerplate/issues"
   },
-  "homepage": "https://github.com/BosNaufal/vue-starter#readme",
+  "homepage": "https://github.com/BosNaufal/vue-boilerplate#readme",
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.3.17",
