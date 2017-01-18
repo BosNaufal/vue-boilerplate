@@ -6,8 +6,8 @@ var basePath = __dirname + "/../../app/";
 
 function generate (path, type, name) {
   // Append Route Statement
-  var textToSearch = "\n  { path: '*',"
-  var textToAdd = "\n { path: '" + path + "',\n    component: function (resolve) {\n      require(['./" + type.toLowerCase() + "s/" + name + "/index.vue'], resolve)\n    }\n  },\n"
+  var textToSearch = "\n  {\n    path: '*',"
+  var textToAdd = "\n {\n    path: '" + path + "',\n    component: function (resolve) {\n      require(['./" + type.toLowerCase() + "s/" + name + "/index.vue'], resolve)\n    }\n  },\n"
   appendText('routes.js', textToSearch, textToAdd)
 }
 
