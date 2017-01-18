@@ -39,22 +39,16 @@ module.exports = function (config) {
 
       },
 
-      webpackMiddleware: {
-           // webpack-dev-middleware configuration
-           // i.e.
-           noInfo: true,
-           // and use stats to turn off verbose output
-           stats: {
-               // options i.e.
-               chunks: false
-           }
-      },
-
       resolve: {
         alias: {
           vue: 'vue/dist/vue.js',
+          api: __dirname + '/../app/api',
+          assets: __dirname + '/../app/assets',
+          components: __dirname + '/../app/components',
+          containers: __dirname + '/../app/containers'
         }
       },
+
     },
 
     webpackServer: {

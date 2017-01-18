@@ -55,6 +55,15 @@ module.exports = {
 
   },
 
+  resolve: {
+    alias: {
+      api: __dirname + '/../app/api',
+      assets: __dirname + '/../app/assets',
+      components: __dirname + '/../app/components',
+      containers: __dirname + '/../app/containers'
+    }
+  },
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
