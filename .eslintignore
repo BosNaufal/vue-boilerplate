@@ -1,4 +1,5 @@
 app/vendor/*
+app/public/*
 internal/*
 webpack/*
 karma.conf.js

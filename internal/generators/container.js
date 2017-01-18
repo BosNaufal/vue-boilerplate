@@ -21,7 +21,7 @@ function getLocation (value) {
 function generate (name) {
   var location = getLocation(name)
   fs.mkdirSync(location);
-  fs.writeFileSync(location + '/index.vue', vueComponentTemplate(name));
+  fs.writeFileSync(location + '/index.vue', vueComponentTemplate(name, true));
   fs.writeFileSync(location + '/constants.js', constantTemplate(name));
   fs.writeFileSync(location + '/actions.js', actionTemplate);
   fs.writeFileSync(location + '/getters.js', getterTemplate);
