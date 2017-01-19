@@ -6,12 +6,14 @@
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --inline --hot",
     "prod": "cross-env NODE_ENV=production webpack --config ./webpack/webpack-prod.config.js -p --color --progress",
     "dev": "webpack --config ./webpack/webpack-prod.config.js -p --color --progress",
-    "lint": "node_modules/eslint/bin/eslint.js app/*",
+    "lint": "node_modules/eslint/bin/eslint.js --ext .js,.vue app/*",
     "test": "karma start karma.conf.js",
     "gen": "node internal/",
     "generate": "node internal/"
   },
-  "precommit": ["npm lint"],
+  "precommit": [
+    "npm lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BosNaufal/vue-boilerplate.git"

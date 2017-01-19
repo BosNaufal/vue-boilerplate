@@ -1,7 +1,7 @@
 module.exports = {
   "extends": [
-    "eslint:recommended",
     "vue",
+    "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
   ],
@@ -15,6 +15,7 @@ module.exports = {
     "html/report-bad-indent": 2,
   },
   "rules": {
+    "import/no-unresolved": 0,
     "promise/always-return": "error",
     "promise/no-return-wrap": "error",
     "promise/param-names": "error",
@@ -25,5 +26,10 @@ module.exports = {
     "promise/no-callback-in-promise": "warn",
     "promise/avoid-new": "warn",
     "semi": 0
-  }
+  },
+  "env": {
+     "jquery": true,
+     "browser": true,
+     "node": true
+   }
 };
