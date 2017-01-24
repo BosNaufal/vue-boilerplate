@@ -48,6 +48,14 @@ module.exports = function (config) {
           containers: __dirname + '/../app/containers'
         }
       },
+      
+      plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        })
+      ]
 
     },
 

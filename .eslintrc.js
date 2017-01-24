@@ -25,11 +25,16 @@ module.exports = {
     "promise/no-promise-in-callback": "warn",
     "promise/no-callback-in-promise": "warn",
     "promise/avoid-new": "warn",
-    "semi": 0
+    "semi": 0,
+    "prefer-const": ["error", {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+    }]
   },
   "env": {
      "jquery": true,
      "browser": true,
-     "node": true
+     "node": true,
+     "mocha": true
    }
 };

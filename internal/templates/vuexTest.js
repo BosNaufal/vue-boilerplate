@@ -6,5 +6,12 @@ function capitalize(val) {
 }
 
 module.exports = function template(type) {
-  return "\/\/ import " + type + "s from '../" + type + "s.js'\n\n\/\/ const { some" + capitalize(type) + " } = " + type + "s\n"
+  return "\n"+
+  '// '+ capitalize(type) +' Specs\n'+
+  '\n'+
+  '// import { expect } from \'chai\';\n'+
+  (type === 'action' ? '// import { put, call } from \'vuex-saga\';\n' : '') +
+  '\n'+
+  "// import " + type + "s from '../" + type + "s.js'\n"+
+  "// const { some" + capitalize(type) + " } = " + type + "s\n"
 }
