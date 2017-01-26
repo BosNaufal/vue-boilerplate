@@ -1,5 +1,7 @@
 
 var fs = require('fs');
+var Handlebars = require('handlebars');
+
 var basePath = __dirname + "/../app/";
 
 // Append Text to File
@@ -13,6 +15,12 @@ var utils = {
     var combine = upperPart + textToAdd + bottomPart
     fs.writeFileSync(basePath + fileName, combine);
     return combine
+  },
+
+  renderTemplate(location) {
+    var templateString = fs.readFileSync(location).toString()
+    template = Handlebars.compile(templateString)
+    return template
   }
 
 }

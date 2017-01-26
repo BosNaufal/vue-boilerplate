@@ -13,8 +13,11 @@ module.exports = {
   ],
   "settings": {
     "html/report-bad-indent": 2,
+    "html/indent": "2",   // code should start at the beginning of the line (no initial indentation).
+    "html/indent": "space"
   },
   "rules": {
+    "no-else-return": "error",
     "import/no-unresolved": 0,
     "promise/always-return": "error",
     "promise/no-return-wrap": "error",
@@ -27,14 +30,20 @@ module.exports = {
     "promise/avoid-new": "warn",
     "semi": 0,
     "prefer-const": ["error", {
-        "destructuring": "any",
-        "ignoreReadBeforeAssign": false
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+    "import/first": ["error"],
+    "import/newline-after-import": ["error"],
+    "import/order": ["error", {
+      "groups": ["external", "internal"]
     }]
   },
   "env": {
      "jquery": true,
      "browser": true,
      "node": true,
-     "mocha": true
+     "mocha": true,
+     "es6": true
    }
 };

@@ -1,5 +1,9 @@
 
-// App Container Specs
+{{#if container}}
+// {{name}} Container Specs
+{{else}}
+// {{name}} Component Specs
+{{/if}}
 
 //  import { expect } from 'chai';
 
@@ -7,7 +11,11 @@
 //  import Component from '../index.vue';
 
 /*
-describe('containers/J', function () {
+{{#if container}}
+describe('containers/{{name}}', function () {
+{{else}}
+describe('components/{{name}}', function () {
+{{/if}}
 
   let vm;
   beforeEach(function () {

@@ -41,20 +41,20 @@ module.exports = function (config) {
 
       resolve: {
         alias: {
-          vue: 'vue/dist/vue.js',
+          vue: 'vue/dist/vue.min.js',
           api: __dirname + '/../app/api',
           assets: __dirname + '/../app/assets',
           components: __dirname + '/../app/components',
           containers: __dirname + '/../app/containers'
         }
       },
-      
+
       plugins: [
         new webpack.DefinePlugin({
           'process.env': {
-            NODE_ENV: '"production"'
+            'NODE_ENV': '"production"'
           }
-        })
+        }),
       ]
 
     },

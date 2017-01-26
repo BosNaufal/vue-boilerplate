@@ -52,14 +52,7 @@ if (!argv.length) mainMenu();
 else {
   var action = argv[0];
   var name = argv[1];
-  switch (action) {
-    case "component":
-      return generateComponent(name)
-      break;
-    case "container":
-      return generateContainer(name)
-      break;
-    default:
-
-  }
+  if (action === 'component' || action === 'com') return generateComponent(name)
+  if (action === 'container' || action === 'con') return generateContainer(name)
+  else console.log("Command Not Found...");
 }

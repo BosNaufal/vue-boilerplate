@@ -4,6 +4,8 @@ module.exports = {
 
   entry: __dirname + '/../app/app.js',
 
+  devtool: 'eval-source-map',
+
   output: {
     path: __dirname + '/../app/public/js',
     publicPath: '/js/',

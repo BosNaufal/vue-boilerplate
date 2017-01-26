@@ -1,0 +1,35 @@
+
+<template>
+  {{#if container}}
+  <div>
+  {{else}}
+  <div class="Root">
+  {{/if}}
+    {{#if container}}
+    <h1>Container: {{name}}</h1>
+    {{else}}
+    <h1>Component: {{name}}</h1>
+    {{/if}}
+  </div>
+</template>
+
+<script>
+
+  {{#if container}}
+  // import { mapGetters } from 'vuex'
+  // import { mapSagas } from 'vuex-saga'
+
+  {{/if}}
+  export default {
+
+
+
+  }
+
+</script>
+
+{{#unless container}}
+<style lang="sass" scoped>
+  @import "./style.sass"
+</style>
+{{/unless}}

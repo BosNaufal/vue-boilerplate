@@ -1,10 +1,19 @@
 
+// Node Modules
 var fs = require('fs');
 var inquirer = require('inquirer');
+var Handlebars = require('handlebars');
 
+// Paths
 var basePath = __dirname + "/../../app/";
-var vueComponentTemplate = require('../templates/vueComponent.js');
-var componentTest = require('../templates/componentTest.js');
+
+// Utils
+var renderTemplate = require('../utils.js').renderTemplate;
+
+// Templates
+var vueComponentTemplate = renderTemplate(__dirname + '/../templates/vueComponent.hbs');
+var componentTest = require('../templates/componentTest.hbs');
+
 
 function getLocation (value) {
   return basePath + 'components/' + value;
@@ -13,12 +22,12 @@ function getLocation (value) {
 function generate (name) {
   var location = getLocation(name)
   fs.mkdirSync(location);
-  fs.writeFileSync(location + '/index.vue', vueComponentTemplate(name));
+  fs.writeFileSync(location + '/index.vue', vueComponentTemplate({ name:name }));
   fs.writeFileSync(location + '/style.sass', "");
 
   var testLocation = location + '/tests';
   fs.mkdirSync(testLocation);
-  fs.writeFileSync(testLocation + '/index.spec.js', componentTest(name));
+  fs.writeFileSync(testLocation + '/index.spec.js', componentTest({ name:name }));
 }
 
 function goToClui () {

@@ -10,10 +10,10 @@ Vue.config.debug = dev
 Vue.config.devTools = dev
 
 // import components
-import app from './containers/App/index.vue'
+import app from './containers/App/index.vue' // eslint-disable-line
 
 // import map
-import routes from './routes.js'
+import routes from './routes.js' // eslint-disable-line
 
 // Vue Router Configuration
 // Make new VueRouter Instance
