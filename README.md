@@ -16,10 +16,13 @@ Relatively Best Practice [Vue 2](https://vuejs.org) Project Structure inspired b
 
 ```bash
 npm install
-npm run start
-npm run prod
 
-# Generator
+npm run start # start development server
+
+npm run prod # production build
+npm run dev # dev build
+
+# Generator (Vue Gen)
 npm run gen
 ```
 
