@@ -42,10 +42,10 @@ module.exports = function (config) {
       resolve: {
         alias: {
           vue: 'vue/dist/vue.min.js',
-          api: __dirname + '/../app/api',
-          assets: __dirname + '/../app/assets',
-          components: __dirname + '/../app/components',
-          containers: __dirname + '/../app/containers'
+          api: __dirname + '/app/api',
+          assets: __dirname + '/app/assets',
+          components: __dirname + '/app/components',
+          containers: __dirname + '/app/containers'
         }
       },
 
