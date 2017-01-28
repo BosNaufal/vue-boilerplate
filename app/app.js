@@ -2,8 +2,7 @@
 import 'babel-polyfill'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import VuexSaga from 'vuex-saga'
-import VuexSaga from '../../vuex-saga/src/index.js'
+import VuexSaga from 'vuex-saga'
 
 // Vue Dev Tools In Development only
 const dev = process.env.NODE_ENV !== 'production';
