@@ -9,4 +9,4 @@ const actions = {
   }
 }
 
-export default actions;
+module.exports = actions;

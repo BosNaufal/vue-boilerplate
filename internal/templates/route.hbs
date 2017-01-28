@@ -1,0 +1,28 @@
+
+  { path: '{{path}}',
+    component: function (resolve) {
+      {{#if container}}
+      require([
+        './containers/{{name}}/index.vue',
+        './containers/{{name}}/mutations',
+        './containers/{{name}}/actions',
+        './containers/{{name}}/getters',
+      ], (
+        {{name}}Component,
+        {{name}}Mutations,
+        {{name}}Actions,
+        {{name}}Getters
+      ) => {
+        store.registerModule('{{name}}', {
+          ...{{name}}Mutations,
+          actions: {{name}}Actions,
+          getters: {{name}}Getters
+        })
+        resolve({{name}}Component)
+      })
+      {{else}}
+      require(['./components/{{name}}/index.vue'], resolve)
+      {{/if}}
+    },
+    props: true
+  },

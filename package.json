@@ -7,7 +7,7 @@
     "prod": "cross-env NODE_ENV=production webpack --config ./webpack/webpack-prod.config.js -p --color --progress",
     "dev": "webpack --config ./webpack/webpack-prod.config.js -p --color --progress",
     "lint": "node_modules/eslint/bin/eslint.js --ext .js,.vue app/*",
-    "test": "karma start karma.conf.js",
+    "test": "karma start ./karma.conf.js",
     "gen": "node internal/",
     "generate": "node internal/"
   },
@@ -46,6 +46,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-runtime": "^5.8.34",
     "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
     "chalk": "^1.1.3",
     "clear": "0.0.1",
     "clui": "^0.3.1",
@@ -63,6 +64,7 @@
     "figlet": "^1.2.0",
     "file-loader": "^0.9.0",
     "handlebars": "^4.0.6",
+    "inject-loader": "^2.0.1",
     "inquirer": "^2.0.0",
     "json-loader": "^0.5.4",
     "karma": "^1.3.0",
@@ -70,10 +72,12 @@
     "karma-cli": "^1.0.1",
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.1",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-webpack": "^1.8.0",
     "minimist": "^1.2.0",
     "mocha": "^3.2.0",
     "node-sass": "^3.9.3",
+    "phantomjs-prebuilt": "^2.1.7",
     "precommit": "^1.2.2",
     "preferences": "^0.2.1",
     "sass-loader": "^4.0.2",
@@ -92,9 +96,8 @@
   "dependencies": {
     "axios": "^0.15.3",
     "js-cookie": "^2.1.3",
-    "vue": "",
-    "vue-router": "",
-    "vuex": "",
+    "vue": "^2.1.10",
+    "vue-router": "^2.2.0",
     "vuex-saga": "0.0.1"
   }
 }

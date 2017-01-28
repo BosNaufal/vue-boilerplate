@@ -9,4 +9,4 @@ const getters = {
   }
 }
 
-export default getters;
+module.exports = getters;

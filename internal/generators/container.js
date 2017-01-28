@@ -22,12 +22,6 @@ var getterTemplate = require('../templates/getter.hbs');
 var moduleTemplate = require('../templates/module.hbs');
 
 
-// function capitalize(val) {
-//   var firstLetter = val.substr(0,1);
-//   var others = val.substr(1, val.length);
-//   return firstLetter.toUpperCase() + others;
-// }
-
 function getLocation (value) {
   return basePath + 'containers/' + value;
 }
@@ -58,14 +52,14 @@ function generate (name) {
   fs.writeFileSync(testLocation + '/getters.spec.js', vuexTest({name:name, type: 'getter', capitalize: 'Getter'}));
 
   // Append Import Statement
-  var textToSearch = '\nVue.use(Vuex)'
-  var textToAdd = "import " + name + " from './containers/" + name + "/module'\n"
-  appendText('store.js', textToSearch, textToAdd)
+  // var textToSearch = '\nVue.use(Vuex)'
+  // var textToAdd = "import " + name + " from './containers/" + name + "/module'\n"
+  // appendText('store.js', textToSearch, textToAdd)
 
   // Append Register Statement
-  textToSearch = '\n  },\n  strict: true'
-  textToAdd = ",\n    " + name
-  appendText('store.js', textToSearch, textToAdd)
+  // textToSearch = '\n  },\n  strict: true'
+  // textToAdd = ",\n    " + name
+  // appendText('store.js', textToSearch, textToAdd)
 }
 
 

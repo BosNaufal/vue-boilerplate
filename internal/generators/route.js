@@ -1,13 +1,16 @@
 
 var fs = require('fs');
 var inquirer = require('inquirer');
+var Handlebars = require('handlebars');
+var routeTemplate = require('../templates/route.hbs')
 var appendText = require('../utils.js').appendText
 var basePath = __dirname + "/../../app/";
 
 function generate (path, type, name) {
   // Append Route Statement
-  var textToSearch = "\n  {\n    path: '*',"
-  var textToAdd = "\n {\n    path: '" + path + "',\n    component: function (resolve) {\n      require(['./" + type.toLowerCase() + "s/" + name + "/index.vue'], resolve)\n    }\n  },\n"
+  var textToSearch = "\n  { path: '*',"
+  var isContainer = type === 'Container'
+  var textToAdd = routeTemplate({ path: path, name: name, container: isContainer })
   appendText('routes.js', textToSearch, textToAdd)
 }
 

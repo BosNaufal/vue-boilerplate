@@ -5,6 +5,8 @@ module.exports = function (config) {
   config.set({
     singleRun: false,
 
+    browsers: ['PhantomJS'],
+
     frameworks: ['mocha'],
 
     files: [

@@ -2,7 +2,8 @@
 import 'babel-polyfill'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VuexSaga from 'vuex-saga'
+// import VuexSaga from 'vuex-saga'
+import VuexSaga from '../../vuex-saga/src/index.js'
 
 // Vue Dev Tools In Development only
 const dev = process.env.NODE_ENV !== 'production';
@@ -13,7 +14,7 @@ Vue.config.devTools = dev
 import app from './containers/App/index.vue' // eslint-disable-line
 
 // import map
-import routes from './routes.js' // eslint-disable-line
+import routes from './routes' // eslint-disable-line
 
 // Vue Router Configuration
 // Make new VueRouter Instance
@@ -24,7 +25,8 @@ const router = new VueRouter({
 })
 
 // Install vuex-saga
-Vue.use(VuexSaga)
+import store from './store' // eslint-disable-line
+Vue.use(VuexSaga, { store: store })
 
 // Mount The Vue
 new Vue(Vue.util.extend({ router }, app)).$mount('app')
