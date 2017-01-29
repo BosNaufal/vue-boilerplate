@@ -5,19 +5,12 @@
 // {{name}} Component Specs
 {{/if}}
 
-// import { expect } from 'chai';
-// import spies from 'chai-spies';
-// chai.use(spies)
-
 // Testing Utils
-// import shallow from '../../../utils/componentTest';
-// import defaultInjections from '../../../utils/defaultInjections';
+// import { mockComponent, mount } from 'vue-testing';
 
 // Prepare The Component
 // const injector = require('!!vue?inject!../index.vue')
-// let Component = injector({
-  // ...defaultInjections()
-// })
+// let Component = mockComponent(injector, { })
 
 /*
 {{#if container}}
@@ -28,7 +21,7 @@ describe('components/{{name}}', function () {
 
   let vm;
   beforeEach(function () {
-    vm = shallow(Component)
+    vm = mount(Component)
   })
 
   it('Some Test', function () {
