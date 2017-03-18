@@ -5,11 +5,16 @@
 // {{name}} Component Specs
 {{/if}}
 
-// Testing Utils
+// Test Utils
+// import chai, { expect } from 'chai';
+// import spies from 'chai-spies';
 // import { mockComponent, mount } from 'vue-testing';
+//
+// chai.use(spies)
 
 // Prepare The Component
 // const injector = require('!!vue?inject!../index.vue')
+
 // let Component = mockComponent(injector, { })
 
 /*
@@ -19,7 +24,7 @@ describe('containers/{{name}}', function () {
 describe('components/{{name}}', function () {
 {{/if}}
 
-  let vm;
+  let vm; // eslint-disable-line
   beforeEach(function () {
     vm = mount(Component)
   })

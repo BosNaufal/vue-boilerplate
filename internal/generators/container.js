@@ -19,7 +19,6 @@ var constantTemplate = require('../templates/constant.hbs');
 var actionTemplate = require('../templates/action.hbs');
 var mutationTemplate = require('../templates/mutation.hbs');
 var getterTemplate = require('../templates/getter.hbs');
-var moduleTemplate = require('../templates/module.hbs');
 
 
 function getLocation (value) {
@@ -41,7 +40,6 @@ function generate (name) {
   fs.writeFileSync(location + '/actions.js', actionTemplate());
   fs.writeFileSync(location + '/getters.js', getterTemplate());
   fs.writeFileSync(location + '/mutations.js', mutationTemplate());
-  fs.writeFileSync(location + '/module.js', moduleTemplate());
 
   // Test Files
   var testLocation = location + '/tests';
